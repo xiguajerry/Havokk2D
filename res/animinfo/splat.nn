@@ -1,0 +1,6 @@
+NAME=splat
+ID=1
+LIFETIME=300
+ATLAS=splat
+FRAMES=7
+EOF

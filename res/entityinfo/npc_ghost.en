@@ -1,0 +1,7 @@
+NAME=Ghost
+EID=7
+SPEED=0.4
+ATLAS=npc_ghost
+ATTACK=none
+DIALOGUE=npc_ghost
+EOF

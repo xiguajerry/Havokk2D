@@ -1,0 +1,6 @@
+NAME=teleport
+ID=0
+LIFETIME=600
+ATLAS=anim_teleport
+FRAMES=8
+EOF

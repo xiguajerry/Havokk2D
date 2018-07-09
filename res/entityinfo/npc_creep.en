@@ -1,0 +1,6 @@
+NAME=Creep
+EID=9
+SPEED=1.4
+ATLAS=npc_creep
+ATTACK=none
+EOF

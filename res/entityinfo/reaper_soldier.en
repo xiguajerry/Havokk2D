@@ -1,0 +1,6 @@
+NAME=Reaper Soldier
+EID=4
+SPEED=1.4
+ATLAS=reaper_soldier
+ATTACK=special
+EOF

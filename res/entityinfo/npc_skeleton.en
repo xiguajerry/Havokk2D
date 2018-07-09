@@ -1,0 +1,7 @@
+NAME=Skeleton
+EID=15
+SPEED=0.4
+ATLAS=npc_skeleton
+ATTACK=none
+DIALOGUE=npc_ghost
+EOF

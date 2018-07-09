@@ -1,0 +1,7 @@
+NAME=Masked Man
+EID=16
+SPEED=0.4
+ATLAS=npc_maskedman
+ATTACK=none
+DIALOGUE=npc_ramble
+EOF

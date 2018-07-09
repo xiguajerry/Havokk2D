@@ -1,0 +1,6 @@
+NAME=Slime
+EID=18
+SPEED=0.1
+ATLAS=npc_slime
+ATTACK=none
+EOF

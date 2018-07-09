@@ -1,0 +1,6 @@
+NAME=Archer
+EID=5
+SPEED=1.6
+ATLAS=archer_test
+ATTACK=higher_arrow
+EOF

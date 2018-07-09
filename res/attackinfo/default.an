@@ -1,0 +1,10 @@
+NAME=default
+ID=0
+ATLAS=projectile_reaper
+SPEED=7.2
+RANGE=9
+FRAMES=16
+DAMAGE=5
+CAST=302
+COOLDOWN=400
+EOF

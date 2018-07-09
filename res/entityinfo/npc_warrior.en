@@ -1,0 +1,7 @@
+NAME=Warrior
+EID=12
+SPEED=0.5
+ATLAS=npc_warrior
+ATTACK=none
+DIALOGUE=npc_ramble
+EOF

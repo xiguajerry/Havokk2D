@@ -1,0 +1,7 @@
+NAME=Knight
+EID=11
+SPEED=0.5
+ATLAS=npc_knight
+ATTACK=none
+DIALOGUE=npc_ramble
+EOF

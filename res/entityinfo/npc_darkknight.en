@@ -1,0 +1,6 @@
+NAME=Dark Knight
+EID=17
+SPEED=0.2
+ATLAS=npc_darkknight
+ATTACK=none
+EOF

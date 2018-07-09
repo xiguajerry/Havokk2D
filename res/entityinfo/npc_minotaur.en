@@ -1,0 +1,7 @@
+NAME=Minotaur
+EID=13
+SPEED=0.4
+ATLAS=npc_minotaur
+ATTACK=none
+DIALOGUE=npc_ramble
+EOF

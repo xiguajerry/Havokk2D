@@ -1,0 +1,6 @@
+NAME=Reaper Ghoul
+EID=2
+SPEED=0.8
+ATLAS=reaper_ghoul
+ATTACK=reaper
+EOF

@@ -1,0 +1,6 @@
+NAME=Scorpion
+EID=14
+SPEED=1.2
+ATLAS=npc_scorpion
+ATTACK=none
+EOF

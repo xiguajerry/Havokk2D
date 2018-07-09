@@ -1,0 +1,8 @@
+NAME=King
+EID=10
+SPEED=0.3
+ATLAS=npc_king
+ATTACK=none
+INTERACTABLE=true
+DIALOGUE=npc_king
+EOF

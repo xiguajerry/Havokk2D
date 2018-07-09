@@ -1,0 +1,7 @@
+NAME=Bandit
+EID=8
+SPEED=0.6
+ATLAS=npc_bandit
+ATTACK=none
+DIALOGUE=npc_ramble
+EOF

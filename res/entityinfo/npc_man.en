@@ -1,0 +1,7 @@
+NAME=Man
+EID=6
+SPEED=0.5
+ATLAS=npc_man
+ATTACK=none
+DIALOGUE=npc_ramble
+EOF
