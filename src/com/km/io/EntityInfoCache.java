@@ -67,7 +67,7 @@ public class EntityInfoCache {
 
                             if (!questinfo.containsKey(dialoguedir)) {
 
-                                BufferedReader br2 = new BufferedReader(new FileReader(new File("./res/chat/" + dialoguedir + ".ed")));
+                                BufferedReader br2 = new BufferedReader(new FileReader("./res/chat/" + dialoguedir + ".ed"));
                                 String d;
                                 ArrayList<String> dialogue = new ArrayList<>();
                                 while (!(d = br2.readLine()).equals("EOF")) {

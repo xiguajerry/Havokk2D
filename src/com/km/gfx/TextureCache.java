@@ -8,7 +8,6 @@ import java.util.HashMap;
 
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL30.glGenerateMipmap;
-import static org.lwjgl.opengles.EXTSparseTexture.GL_TEXTURE_2D;
 
 public class TextureCache {
 

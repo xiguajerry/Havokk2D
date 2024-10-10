@@ -120,8 +120,8 @@ public class Havokk {
     WorldMap map;
 
     public static void main(String[] args) {
-	    System.out.println("Initialising......");
-	    new Havokk().run();
+        System.out.println("Initialising......");
+        new Havokk().run();
     }
 
     public void run() {
@@ -198,7 +198,7 @@ public class Havokk {
             textureCache.getAtlas(a.atlas);
         }
 
-        projection = new Matrix4f().setOrtho2D(-WIDTH/2, WIDTH/2, -HEIGHT/2, HEIGHT/2);
+        projection = new Matrix4f().setOrtho2D(-WIDTH / 2, WIDTH / 2, -HEIGHT / 2, HEIGHT / 2);
 
         viewMatrix = new Matrix4f().setTranslation(new Vector3f(0));
 
@@ -272,7 +272,7 @@ public class Havokk {
 
         setProjection();
 
-        while ( !glfwWindowShouldClose(window) ) {
+        while (!glfwWindowShouldClose(window)) {
 
             render = false;
 
@@ -407,6 +407,7 @@ public class Havokk {
     }
 
     double actiontimer;
+
     void beginInteraction(int entityid) {
         Entity e = getEntityForId(entityid);
 
@@ -601,7 +602,7 @@ public class Havokk {
     Matrix4f scale_font = new Matrix4f().scale(1.0f / 16.0f, 1.0f / 16.0f, 0);
 
     private Matrix4f getFontTextureTranslation(byte c) {
-        return scale_font.translate( c % 16, c / 16 , 0, new Matrix4f());
+        return scale_font.translate(c % 16, c / 16, 0, new Matrix4f());
     }
 
     private void setAction(String n, String s) {
@@ -648,21 +649,21 @@ public class Havokk {
 
     private void drawstats() {
         if (text_stats != null) {
-            text_stats.text = "level: " + player.level + " xp: [" + (int)player.xp + "/" + (int)Entity.getExpForLevel(player.level + 1) + "]";
+            text_stats.text = "level: " + player.level + " xp: [" + (int) player.xp + "/" + (int) Entity.getExpForLevel(player.level + 1) + "]";
             renderStaticText(text_stats);
             return;
         }
-        text_stats = new TextObject("level: " + player.level + " xp: [" + (int)player.xp + "/" + (int)Entity.getExpForLevel(player.level + 1) + "]", new Vector3f((-WIDTH / 2) + 10, (HEIGHT / 2) - 16 * 7, 0));
+        text_stats = new TextObject("level: " + player.level + " xp: [" + (int) player.xp + "/" + (int) Entity.getExpForLevel(player.level + 1) + "]", new Vector3f((-WIDTH / 2) + 10, (HEIGHT / 2) - 16 * 7, 0));
         renderStaticText(text_stats);
     }
 
     private void drawloc() {
         if (text_loc != null) {
-            text_loc.text = "loc: " + (int)player.pos.x + ", " + (int)player.pos.y + " [tile " + (int)player.pos.x / 64 + ", " + (int)(player.pos.y / 64) + "]";
+            text_loc.text = "loc: " + (int) player.pos.x + ", " + (int) player.pos.y + " [tile " + (int) player.pos.x / 64 + ", " + (int) (player.pos.y / 64) + "]";
             renderStaticText(text_loc);
             return;
         }
-        text_loc = new TextObject("loc: " + (int)player.pos.x + "," + (int)player.pos.y + " [" + (int)player.pos.x / 64 + "," + (int)(player.pos.y / 64) + "]", new Vector3f((-WIDTH / 2) + 10, (HEIGHT / 2) - 16 * 2, 0));
+        text_loc = new TextObject("loc: " + (int) player.pos.x + "," + (int) player.pos.y + " [" + (int) player.pos.x / 64 + "," + (int) (player.pos.y / 64) + "]", new Vector3f((-WIDTH / 2) + 10, (HEIGHT / 2) - 16 * 2, 0));
         renderStaticText(text_loc);
     }
 
@@ -678,11 +679,11 @@ public class Havokk {
 
     private void drawhp() {
         if (text_hp != null) {
-            text_hp.text = "hp: " + (int)player.hitpoints + " / " + (int)player.max_hitpoints;
+            text_hp.text = "hp: " + (int) player.hitpoints + " / " + (int) player.max_hitpoints;
             renderStaticText(text_hp);
             return;
         }
-        text_hp = new TextObject("hp: " + (int)player.hitpoints + " / " + (int)player.max_hitpoints, new Vector3f((-WIDTH / 2) + 10, (HEIGHT / 2) - 16 * 6, 0));
+        text_hp = new TextObject("hp: " + (int) player.hitpoints + " / " + (int) player.max_hitpoints, new Vector3f((-WIDTH / 2) + 10, (HEIGHT / 2) - 16 * 6, 0));
         renderStaticText(text_hp);
     }
 
@@ -779,7 +780,7 @@ public class Havokk {
 
         Vector3f pos = t.getPos();
 
-        shaderProgram.setUniform("hit", new Vector4f(2 , 1, 1, t.getHitMod()));
+        shaderProgram.setUniform("hit", new Vector4f(2, 1, 1, t.getHitMod()));
 
         for (byte c : t.getBytes()) {
 
@@ -817,7 +818,7 @@ public class Havokk {
     Matrix4f scale_map = new Matrix4f().scale(1.0f / 16.0f, 1.0f / 235.0f, 0);
 
     private Matrix4f getMapTranslation(int id) {
-        return scale_map.translate( id % 16, id / 16 , 0, new Matrix4f());
+        return scale_map.translate(id % 16, id / 16, 0, new Matrix4f());
     }
 
     private void renderWorld() {
@@ -974,7 +975,7 @@ public class Havokk {
 
         if (player.died) {
             while (!map.checkWalkable(player.pos.x, player.pos.y)) {
-                player.setPosition((float)(Math.random() * (map.width - 1) * 64), (float)(Math.random() * (map.height - 1) * 64));
+                player.setPosition((float) (Math.random() * (map.width - 1) * 64), (float) (Math.random() * (map.height - 1) * 64));
             }
             updateCamera();
             setProjection();
@@ -1129,8 +1130,8 @@ public class Havokk {
         if (x <= 0 || y >= (map.height - 1) * 64 || y <= 0 || x >= (map.width - 1) * 64)
             e.movement.zero();
 
-        else if (!map.checkWalkable(x , y))
-                e.movement.zero();
+        else if (!map.checkWalkable(x, y))
+            e.movement.zero();
 
         if (!e.teleporting)
             e.updateMovement();
@@ -1183,10 +1184,10 @@ public class Havokk {
         EntityInfoCache.EntityInfo ei = entityInfoCache.get("Archer");
 
         player = new Entity(textureCache.getAtlas(ei.atlas), ei.speed, ei.attack, "blowmelol");
-        player.setPosition((float)(Math.random() * (map.width - 1) * 64), (float)(Math.random() * (map.height - 1) * 64));
+        player.setPosition((float) (Math.random() * (map.width - 1) * 64), (float) (Math.random() * (map.height - 1) * 64));
 
         while (!map.checkWalkable(player.pos.x, player.pos.y))
-            player.setPosition((float)(Math.random() * (map.width - 1) * 64), (float)(Math.random() * (map.height - 1) * 64));
+            player.setPosition((float) (Math.random() * (map.width - 1) * 64), (float) (Math.random() * (map.height - 1) * 64));
 
         player.range = attackInfoCache.get(ei.attack).range * 32;
         player.overhead = new TextObject("blowmelol", player.pos);
@@ -1196,12 +1197,12 @@ public class Havokk {
         for (int i = 0; i <= 550; i++) {
             ei = entityInfoCache.getRandom();
             entity2 = new Entity(textureCache.getAtlas(ei.atlas), ei.speed, ei.attack, ei.name);
-            entity2.setPosition((float)(Math.random() * (map.width - 1) * 64), (float)(Math.random() * (map.height - 1) * 64));
 
-            while (!map.checkWalkable(entity2.pos.x, entity2.pos.y))
-                entity2.setPosition((float)(Math.random() * (map.width - 1) * 64), (float)(Math.random() * (map.height - 1) * 64));
+            do
+                entity2.setPosition((float) (Math.random() * (map.width - 1) * 64), (float) (Math.random() * (map.height - 1) * 64));
+            while (!map.checkWalkable(entity2.pos.x, entity2.pos.y));
 
-            entity2.setAnimDir((int)(Math.random() * 4));
+            entity2.setAnimDir((int) (Math.random() * 4));
 
             if (entity2.attackable)
                 entity2.range = attackInfoCache.get(ei.attack).range * 32;
@@ -1221,7 +1222,7 @@ public class Havokk {
         updateCamera();
     }
 
-    private void addEntity(String n, Entity e)  {
+    private void addEntity(String n, Entity e) {
         List l = entities.get(n);
         rendertotal++;
 
@@ -1255,13 +1256,13 @@ public class Havokk {
 
         anims.add(new StaticAnim(ai, loc, loop));
 
-      //  animtotal++;
+        //  animtotal++;
 
     }
 
     private Matrix4f getProjectileTranslation(int frame, int frames) {
-            Matrix4f scale = new Matrix4f().scale(1.0f / frames, 1.0f, 0);
-            return scale.translate(frame, 0, 0);
+        Matrix4f scale = new Matrix4f().scale(1.0f / frames, 1.0f, 0);
+        return scale.translate(frame, 0, 0);
     }
 
     private void renderProjectiles() {
